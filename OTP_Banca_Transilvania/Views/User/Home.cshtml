@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Home";
+}
+
+<head>
+    <title>Salut</title>
+</head>
+<body>
+    @using (Html.BeginForm("GenerateOTP", "User", FormMethod.Post))
+    {
+        <table cellpadding="2" cellspacing="0" border="0">
+            <tr>
+                <td>CustomerID:</td>
+                <td>
+                    @Html.TextBox("ID")
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Generate OTP" /></td>
+            </tr>
+        </table>
+    }
+</body>

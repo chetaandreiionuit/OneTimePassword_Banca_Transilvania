@@ -1,0 +1,28 @@
+﻿
+
+
+@{
+    ViewBag.Title = "GenerateOTP";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <title>Salut</title>
+</head>
+<body>
+    @using (Html.BeginForm("ValidateOTP", "User", FormMethod.Post))
+    {
+        <table cellpadding="2" cellspacing="0" border="0">
+            <tr>
+                <td>OTP:    @ViewBag.Pass </td>
+                <td>
+                    @Html.TextBox("OTP")
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="alidate OTP" /></td>
+            </tr>
+        </table>
+    }
+</body>
